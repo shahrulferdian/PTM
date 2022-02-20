@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar function</title>
+</head>
+<body>
+
+    <!-- panggil di sini/ ganti melalui functionnya -->
+    <form action="">
+        tanggal :<input type="number" id="t">
+        bulan :<input type="number" id="b">
+        <button onclick="panggil()">klik</button>
+    </form>
+    <!-- ini cuma script/ isinya -->
+    <script>
+        function panggilZodiak() { 
+            let tanggal = document.querySelector('#tanggal').value;
+            let bulan = document.querySelector('#bulan').value;
+        jordi(tanggal,bulan);
+        }
+
+        function jordi(tanggal, bulan){
+            if (bulan == 1 && tanggal >= 1 && tanggal <= 19) {
+            alert('capricornus');
+            }else if ((bulan == 1 && tanggal >= 20 && tanggal <= 31) || (bulan == 2 && tanggal >= 1 || tanggal <= 18)) {
+                alert('aquarius');
+            }
+        }
+
+        function tampil(){
+            alert('belajar function');
+        }
+
+        let bagi = (a,b)=>{
+            let c = a/b;
+            alert(c);
+        }
+
+        function baru(){
+            bagi(3,5);
+        }
+
+        function kali() {
+            let b = 3;
+            let a = 5;
+            let c = a * b;
+            alert(c);
+        }
+
+        function kaliparam(a,b) {
+            let c = a*b;
+            alert(c);
+        }
+
+        function panggil(){
+            let tanggal = document.querySelector('#t').value;
+            let bulan = document.querySelector('#b').value;
+            zodnew(tanggal, bulan);
+        }
+
+        let zodnew = (tanggal,bulan)=>{
+                if (bulan == 1 && tanggal >= 1 && tanggal <= 19) {
+                alert('capricornus');
+            } else if ((bulan == 1 && tanggal >= 20 && tanggal <= 31) || (bulan == 2 && tanggal >= 1 || tanggal <= 18)) {
+                alert('aquarius');
+            }
+        }
+    </script>
+
+
+</body>
+</html>
